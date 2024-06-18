@@ -1,0 +1,5 @@
+services:
+  quicksight:
+    build:
+      context: .
+      dockerfile: Dockerfile

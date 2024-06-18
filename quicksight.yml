@@ -1,0 +1,48 @@
+export_aws_account:
+    name:             'sandbox'
+    account_id:       '{{ aws_sandbox_account_id }}'
+    region:           'us-east-1'
+    assume_role_name: 'application/quicksight_stage_role'
+
+import_prod_aws_account:
+    name:             'prod'
+    account_id:       '{{ aws_prod_account_id }}'
+    region:           'us-east-1'
+    assume_role_name: 'application/quicksight_prod_role'
+
+import_stage_aws_account:
+    name:             'sandbox'
+    account_id:       '{{ aws_sandbox_account_id }}'
+    region:           'us-east-1'
+    assume_role_name: 'application/quicksight_stage_role'
+
+snowflake_us_east:
+    sf_east_host:      '{{ snowflake_east_host }}'
+    sf_east_db:        '{{ snowflake_east_db }}'
+    sf_east_wh:        '{{ snowflake_east_warehouse }}'
+    sf_east_user_name: '{{ snowflake_us_east_user }}'
+    sf_east_password:  '{{ snowflake_us_east_pwd }}'
+
+snowflake_us_west:
+    sf_west_host:      '{{ snowflake_west_host }}'
+    sf_west_db:        '{{ snowflake_west_db }}'
+    sf_west_wh:        '{{ snowflake_west_warehouse }}'
+    sf_west_user_name: '{{ snowflake_us_west_user }}'
+    sf_west_password:  '{{ snowflake_us_west_pwd }}'
+
+qs_datasource_east:
+    qs_ds_east_name:   'CICD Snowflake US-East'
+    qs_ds_east_id:     'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+
+qs_datasource_west:
+    qs_ds_west_name:   'CICD Snowflake US-West'
+    qs_ds_west_id:     'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+
+asset_bundle_directory:
+    analysis_bundle_directory:  '/app/asset_bundles/analysis_bundles'
+    dashboard_bundle_directory: '/app/asset_bundles/dashboard_bundles'
+
+usage_trends:
+    analysis_id:  'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+    dashboard_id: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+
